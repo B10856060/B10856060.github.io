@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .bg img {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #ccc;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .item {
+            margin: 0 10px 20px;
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+        }
+        
+        nav {
+            width: 40%;
+            height: 100vh;
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #a6e22e;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22e;
+        }
+        
+        #menu {
+            position: absolute;
+        }
+        
+        #menu:checked~.header nav {
+            left: 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+            .btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40?random=1">
+        </h1>
+        <label for="menu" class="btn"> 
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+    <div class="bg">
+        <img src=https://picsum.photos/300/200?random=1>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, reprehenderit accusantium. Corrupti hic ducimus soluta nobis ut beatae, quas, eos deserunt voluptatibus vel fugiat quam commodi adipisci laudantium odio at!</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="黑醋栗.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos impedit culpa adipisci magni non soluta quibusdam ullam a deleniti atque possimus eius neque, suscipit unde laboriosam officiis cupiditate saepe! Veniam.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="白葡萄.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque esse, vel ipsam suscipit quo numquam delectus repellendus necessitatibus, quasi libero explicabo, nam aperiam! Tenetur deleniti temporibus commodi? Distinctio, tenetur
+                            ipsa.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="水梨.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestiae et molestias cum obcaecati assumenda perspiciatis. Et, quae, commodi illum officia dolore sint aliquid eos error iure saepe porro aperiam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="two">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/id/684/600/400">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>哈囉你好嗎衷心感謝珍重再見期待再相逢</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="wrap">
+        <div class="title">
+            <h2>關於我們</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente ipsam adipisci. Eveniet laborum laudantium cumque, rerum sapiente ad soluta illo quam culpa velit voluptas, nihil, ducimus architecto! Adipisci, corporis.</p>
+        </div>
+        <div class="item-group">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/200?random=2">
+                </div>
+                <div class="text">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati fuga, non animi voluptatum amet ad! Voluptate nobis ipsa eius quis maiores dicta repellendus inventore numquam, ex quos, ea facilis? Minus?</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/200?random=3">
+                </div>
+                <div class="text">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aspernatur exercitationem aperiam odit earum perspiciatis perferendis architecto dolores eius molestiae. Iure, minus! Sapiente perspiciatis, quisquam ex ratione ut nisi
+                        voluptatibus.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/200?random=4">
+                </div>
+                <div class="text">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nobis dolores error, mollitia voluptatem porro laudantium corporis beatae, quod eaque deleniti. Cumque sint minus, explicabo commodi sequi tenetur voluptatum quos?</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/200?random=4">
+                </div>
+                <div class="text">
+                    <h3>title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laborum, nisi ratione id iste distinctio nihil in unde ipsa aspernatur beatae expedita cum amet incidunt repellendus, perferendis quaerat a rem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright 2020 by css
+    </div>
+
+
+
+
+
+</body>
+
+</html>
