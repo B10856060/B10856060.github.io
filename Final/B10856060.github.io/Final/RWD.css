@@ -1,166 +1,54 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: white;
-}
-
-img {
-    vertical-align: bottom;
-}
-
-.item-group {
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-}
-
-.bg img {
-    width: 100%;
-}
-
-.footer {
-    background-color: #333;
-    color: #aaa;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.wrap {
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-}
-
-.title h2 {
-    text-align: center;
-    font-size: 46px;
-}
-
-.title {
-    margin: 0 0px 10px;
-    padding: 20px 10px;
-    background-color: #333;
-}
-
-.title p {
-    font-size: 22px;
-    text-align: center;
-}
-
-.item {
-    margin: 0 10px 20px;
-}
-
-.item .text h3 {
-    font-size: 24px;
-    text-align: center;
-}
-
-.item .pic img {
-    width: 100%;
-}
-
-.two {
-    margin: 60px 0;
-}
-
-.header {
-    height: 50px;
-    background-color: #000;
-    position: relative;
-}
-
-.btn {
-    width: 40px;
-    height: 40px;
-    background-color: #000;
-    display: block;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-}
-
-.btn span {
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-    display: block;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    height: 2px;
-    left: 2px;
-    width: 36px;
-    background-color: #aaa;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+    box-sizing: border-box;
 }
 
 nav {
-    width: 40%;
-    height: 100vh;
-    background-color: #282923;
-    position: absolute;
-    top: 50px;
-    left: -100%;
+    width: 100%;
+    /*導覽列寬*/
+    height: 80px;
+    /*導覽列高*/
+    background: rgb(145, 228, 159);
 }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    border-bottom: 1px solid white;
+nav ul {
+    float: right;
+    /*顯示在右邊*/
+    margin-right: 20px;
+    /*距離右邊邊界20px*/
 }
 
-#menu {
-    position: absolute;
+nav ul li {
+    display: inline-block;
+    /*水平顯示標籤*/
+    line-height: 80px;
+    /*距離頂端80px*/
+    margin: 0px 30px 0px 30px;
+    /*margin 上   下   左  右
+            0px  30px 0px 30px*/
 }
 
-#menu:checked~.header nav {
-    left: 0;
+nav ul li a {
+    color: black;
+    font-size: 18px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+nav ul li a:hover {
+    /*滑鼠指到nav ul li a上方時，會執行以下動作*/
+    background-color: rgb(255, 255, 255);
 }
 
-@media screen and (min-width:768px) {
-    .item-group {
-        display: flex;
-    }
-    .btn {
-        display: none;
-    }
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav {
-        position: relative;
-        left: 0;
-        display: flex;
-        width: auto;
-        height: auto;
-        top: 0;
-        background-color: transparent;
-        color: white;
-    }
-    nav a {
-        border-bottom: none;
-    }
+label.logo {
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 100px;
 }
 
-
-/*---------------------------------------------------*/
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
 
 @media only screen and (min-width:600px) {
     .col-s-1 {
@@ -202,12 +90,6 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-    .firstpage,
-    .drinkpage,
-    .crepespage {
-        width: 70%;
-        margin: auto;
-    }
     .col-1 {
         width: 8.33%;
     }
@@ -246,12 +128,32 @@ a {
     }
 }
 
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
     background-color: #33b5e5;
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+    background-color: #33b5e5;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+img {
+    max-width: 100%;
+    /*<-- 縮放過程中不超過原來大小-->*/
+    height: auto;
 }
 
 
@@ -270,6 +172,24 @@ a {
     content: "";
     display: table;
     clear: both;
+}
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+
+@media screen and (max-width: 1100px) {
+    .column {
+        width: 50%;
+    }
+}
+
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
 }
 
 
@@ -300,7 +220,7 @@ a {
 
 .rwdTr:nth-of-type(odd),
 .rwdTitle_gorup:nth-of-type(odd) {
-    background-color: white;
+    background-color: #eaeaea;
 }
 
 
@@ -346,8 +266,4 @@ a {
     .rwdTitle_gorup:nth-of-type(odd) {
         background-color: #e8f6ff;
     }
-}
-
-body {
-    background-color: #333;
 }
